@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".EntryDetailActivity">
+
+    <TextView
+            android:id="@+id/entryID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entry ID"
+            android:layout_margin="8dp"/>
+    <TextView
+            android:id="@+id/entryBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entry Body"
+            android:layout_margin="8dp"/>
+    <TextView
+            android:id="@+id/entryDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entry Add Date"
+            android:layout_margin="8dp"/>
+    <TextView
+            android:id="@+id/entryDM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entry Modification Date"
+            android:layout_margin="8dp"/>
+
+</LinearLayout>

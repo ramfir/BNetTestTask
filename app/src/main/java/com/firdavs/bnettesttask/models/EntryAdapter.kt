@@ -10,9 +10,15 @@ import kotlinx.android.synthetic.main.entry_item.view.*
 class EntryAdapter(val entries: List<Entry>): RecyclerView.Adapter<EntryAdapter.EntryViewHolder>() {
 
     inner class EntryViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val add_date = itemView.add_date
-        val mod_date = itemView.mod_date
+        val card = itemView.card_view
+        val addDate = itemView.add_date
+        val modDate = itemView.mod_date
         val body = itemView.body
+    }
+
+    var listener: Listener? = null
+    interface Listener {
+        fun onClick(position: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EntryViewHolder {
@@ -24,14 +30,18 @@ class EntryAdapter(val entries: List<Entry>): RecyclerView.Adapter<EntryAdapter.
     override fun getItemCount() = entries.size
 
     override fun onBindViewHolder(holder: EntryViewHolder, position: Int) {
-        holder.add_date.text = entries[position].da
-        holder.mod_date.text = entries[position].dm
+        holder.addDate.text = entries[position].da
+        holder.modDate.text = entries[position].dm
         if (entries[position].da == entries[position].dm) {
-            holder.mod_date.visibility = View.INVISIBLE
+            holder.modDate.visibility = View.INVISIBLE
         }
         if (entries[position].body.length > 200)
             holder.body.text = entries[position].body.substring(0, 200)
         else
             holder.body.text = entries[position].body
+
+        holder.card.setOnClickListener {
+            listener?.onClick(position)
+        }
     }
 }
