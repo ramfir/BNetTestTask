@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.firdavs.bnettesttask.R
 import kotlinx.android.synthetic.main.entry_item.view.*
 
-class EntryAdapter(val entries: List<Entry>): RecyclerView.Adapter<EntryAdapter.EntryViewHolder>() {
+class EntryAdapter(var entries: List<Entry>): RecyclerView.Adapter<EntryAdapter.EntryViewHolder>() {
 
     inner class EntryViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val card = itemView.card_view
@@ -30,8 +30,8 @@ class EntryAdapter(val entries: List<Entry>): RecyclerView.Adapter<EntryAdapter.
     override fun getItemCount() = entries.size
 
     override fun onBindViewHolder(holder: EntryViewHolder, position: Int) {
-        holder.addDate.text = entries[position].da
-        holder.modDate.text = entries[position].dm
+        holder.addDate.text = entries[position].getFormattedDa()
+        holder.modDate.text = entries[position].getFormattedDm()
         if (entries[position].da == entries[position].dm) {
             holder.modDate.visibility = View.INVISIBLE
         }

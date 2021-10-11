@@ -8,7 +8,7 @@
         android:minHeight="50dp"
         android:elevation="2dp"
         app:cardCornerRadius="4dp"
-        android:layout_margin="4dp">
+        android:layout_margin="4dp" xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
             android:orientation="horizontal"
@@ -19,25 +19,27 @@
 
         <TextView
                 android:id="@+id/add_date"
-                android:text="10/8/2021"
+                tools:text="10/8/2021"
                 android:gravity="center"
                 android:layout_marginRight="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"/>
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
         <TextView
                 android:id="@+id/mod_date"
-                android:text="10/8/2021"
+                tools:text="20/01/1770"
                 android:gravity="center"
                 android:layout_marginRight="4dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"/>
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
         <TextView
                 android:id="@+id/body"
-                android:text="sdfkjhsdkjfhskjdfhksajdhfkasjdhf"
+                tools:text="sdfkjhsdkjfhskjdfhksajdhfkasjdhf"
                 android:gravity="center"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"/>
+                android:layout_weight="3"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

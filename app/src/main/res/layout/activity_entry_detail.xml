@@ -9,28 +9,11 @@
         tools:context=".EntryDetailActivity">
 
     <TextView
-            android:id="@+id/entryID"
+            android:id="@+id/entryInfo"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Entry ID"
-            android:layout_margin="8dp"/>
-    <TextView
-            android:id="@+id/entryBody"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Entry Body"
-            android:layout_margin="8dp"/>
-    <TextView
-            android:id="@+id/entryDA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Entry Add Date"
-            android:layout_margin="8dp"/>
-    <TextView
-            android:id="@+id/entryDM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Entry Modification Date"
             android:layout_margin="8dp"/>
 
 </LinearLayout>

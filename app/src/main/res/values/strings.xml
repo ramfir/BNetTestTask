@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BNetTestTask</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="text_hint">Enter some text</string>
+    <string name="add_date">Add Date</string>
+    <string name="mod_date">Modification\nDate</string>
+    <string name="entry_body">Body</string>
 </resources>
