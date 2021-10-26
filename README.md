@@ -1,7 +1,19 @@
 # BNetTestTask
 
-# Screenshots
+# Preview
 
-Start page             |  Add button was clicked |  Save button was clicked |  Entry was clicked
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![1](https://user-images.githubusercontent.com/52213479/136850991-ea9f2b5f-834c-4ada-a675-c8d1f91835d8.jpg)  |  ![2](https://user-images.githubusercontent.com/52213479/136851009-04b585ff-d29b-477a-99df-ff9c8b3ce0c4.jpg) |  ![3](https://user-images.githubusercontent.com/52213479/136851018-62fd7d92-bdc4-4556-aa15-b00e38e320c9.jpg) |  ![4](https://user-images.githubusercontent.com/52213479/136851027-c7bfb0dc-a030-443e-9ed5-53446dfb2dd2.jpg)
+<img src="https://user-images.githubusercontent.com/52213479/138871172-829363e4-e260-4cfe-8c51-4a3f88dfe893.gif" height="500" />
+
+# Logic
+
+All entries are shown inside RecyclerView in EntryListActivity.
+
+
+After very first run of the app Repository will send request new_session to the server using Retrofit and gets session for user.
+
+For adding entry AddEntryActivity calls ViewModel's addEntry() method which calls Repository's addEntry(session, body) inside Coroutine since request should be sent in background thread and not block UI thread. Repository sends request to the server using Retrofit, passes user's session and entry's body.
+
+EntryListActivity is used for displaying all user's entries by sending another request get_entries through ViewModel and Repository.
+
+EntryDetailActivity shows detail of clicked entry in RecyclerView.
+
